@@ -259,6 +259,11 @@ public class Form extends javax.swing.JFrame {
         });
 
         Color_font.setText("Couleur du fond");
+        Color_font.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                Color_fontStateChanged(evt);
+            }
+        });
         Color_font.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Color_fontActionPerformed(evt);
@@ -379,25 +384,7 @@ public class Form extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void Color_fontActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Color_fontActionPerformed
-        if (Color_font.isSelected()) {
-            jPanel1.setEnabled(true);
-            Red_fond.setEnabled(true);
-            Green_fond.setEnabled(true);
-            Blue_fond.setEnabled(true);
-        } else {
-            jPanel1.setEnabled(false);
-            Red_fond.setEnabled(false);
-            Green_fond.setEnabled(false);
-            Blue_fond.setEnabled(false);
-            jPanel1.setEnabled(false);
-            Green_fond.setEnabled(false);
-            Blue_fond.setEnabled(false);
-            Red_fond.setEnabled(false);
-            Green_fond.setSelected(false);
-            Blue_fond.setSelected(false);
-            Red_fond.setSelected(false);
-            Text_2.setOpaque(false);
-        }
+        
     }//GEN-LAST:event_Color_fontActionPerformed
 
     private void MinActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MinActionPerformed
@@ -558,23 +545,55 @@ public class Form extends javax.swing.JFrame {
             Color_text.setEnabled(true);
             Casse.setEnabled(true);
         } else {
-            Choice_panel.setEnabled(false);
+            
             Color_font.setSelected(false);
-            Color_text.setSelected(false);
+//            Choice_panel.setEnabled(false);
+//            Color_font.setSelected(false);
+//            Color_text.setSelected(false);
+//
+//            Casse.setSelected(false);
+//            Color_font.setEnabled(false);
+//            Color_text.setEnabled(false);
+//            Casse.setEnabled(false);
+//
+//            jPanel2.setEnabled(false);
+//            Red_text.setEnabled(false);
+//            Green_text.setEnabled(false);
+//            Black_text.setEnabled(false);
+//            Red_text.setSelected(false);
+//            Green_text.setSelected(false);
+//            Black_text.setSelected(false);
+//
+//            jPanel1.setEnabled(false);
+//            Green_fond.setEnabled(false);
+//            Blue_fond.setEnabled(false);
+//            Red_fond.setEnabled(false);
+//            Green_fond.setSelected(false);
+//            Blue_fond.setSelected(false);
+//            Red_fond.setSelected(false);
+//
+//            Panel_casse.setEnabled(false);
+//            Maj.setEnabled(false);
+//            Min.setEnabled(false);
+//            Maj.setSelected(false);
+//            Min.setSelected(false);
+//            Text_2.setOpaque(false);
+//            Text_2.setForeground(new Color(0, 0, 0));
+        }
+    }//GEN-LAST:event_Text_1KeyReleased
 
-            Casse.setSelected(false);
-            Color_font.setEnabled(false);
-            Color_text.setEnabled(false);
-            Casse.setEnabled(false);
-
-            jPanel2.setEnabled(false);
-            Red_text.setEnabled(false);
-            Green_text.setEnabled(false);
-            Black_text.setEnabled(false);
-            Red_text.setSelected(false);
-            Green_text.setSelected(false);
-            Black_text.setSelected(false);
-
+    private void Color_fontStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_Color_fontStateChanged
+        // TODO add your handling code here:
+        if (Color_font.isSelected()) {
+            jPanel1.setEnabled(true);
+            Red_fond.setEnabled(true);
+            Green_fond.setEnabled(true);
+            Blue_fond.setEnabled(true);
+        } else {
+            jPanel1.setEnabled(false);
+            Red_fond.setEnabled(false);
+            Green_fond.setEnabled(false);
+            Blue_fond.setEnabled(false);
             jPanel1.setEnabled(false);
             Green_fond.setEnabled(false);
             Blue_fond.setEnabled(false);
@@ -582,16 +601,9 @@ public class Form extends javax.swing.JFrame {
             Green_fond.setSelected(false);
             Blue_fond.setSelected(false);
             Red_fond.setSelected(false);
-
-            Panel_casse.setEnabled(false);
-            Maj.setEnabled(false);
-            Min.setEnabled(false);
-            Maj.setSelected(false);
-            Min.setSelected(false);
             Text_2.setOpaque(false);
-            Text_2.setForeground(new Color(0, 0, 0));
         }
-    }//GEN-LAST:event_Text_1KeyReleased
+    }//GEN-LAST:event_Color_fontStateChanged
 
     /**
      * @param args the command line arguments
