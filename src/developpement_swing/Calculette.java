@@ -22,6 +22,7 @@ public class Calculette extends javax.swing.JFrame {
      */
     public Calculette() {
         initComponents();
+        setTitle("Fenêtre qui affiche du texte");
     }
 
     /**

@@ -11,11 +11,13 @@ import java.util.*;
  * @author 80010-37-15
  */
 public  class MonModele extends AbstractTableModel{
-    
-    List<Client> clients = new ArrayList<Client>();
+    // Création d'un tableau de la classe Client
+    ArrayList<Client> clients = new ArrayList<Client>();
+    // En tête du tableau
     String[] entetes = {"Prénom", "Nom", "Ville"};
     
     public MonModele() {
+        // Ajoute 4 lignes dans le tableau
         clients.add(new Client("Josh", "Homme", "Joshua Tree"));
         clients.add(new Client("Dave", "Grohl", "Warren"));
         clients.add(new Client("Krist", "Novoselic", "Compton"));
@@ -55,7 +57,6 @@ public  class MonModele extends AbstractTableModel{
     }
       public void SupprimeClient(int i) {
         clients.remove(i);
-
         fireTableRowsDeleted(i, i);
     }
 }
