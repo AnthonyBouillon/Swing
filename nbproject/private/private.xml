@@ -3,9 +3,10 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/80010-37-15/Documents/Developpement_swing/src/jTable/MonModele.java</file>
-            <file>file:/C:/Users/80010-37-15/Documents/Developpement_swing/src/jTable/Client.java</file>
-            <file>file:/C:/Users/80010-37-15/Documents/Developpement_swing/src/jTable/Form1.java</file>
+            <file>file:/C:/Users/80010-37-15/Documents/Developpement_swing/src/DAO/ClientDAO.java</file>
+            <file>file:/C:/Users/80010-37-15/Documents/Developpement_swing/src/DAO/InterfaceClient.java</file>
+            <file>file:/C:/Users/80010-37-15/Documents/Developpement_swing/src/DAO/Client.java</file>
+            <file>file:/C:/Users/80010-37-15/Documents/Developpement_swing/src/DAO/test_unit.java</file>
         </group>
     </open-files>
 </project-private>

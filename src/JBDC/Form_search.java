@@ -174,16 +174,18 @@ public class Form_search extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
 
         if (text_numfou.getText().length() != 5) {
-            error_text.setText("Le code comporte 5 caractère");
+            error_text.setText("Le code fournisseur comporte 5 caractère");
             nom_text.setText("");
             adresse_text.setText("");
             cp_text.setText("");
             ville_text.setText("");
-        }else if(text_numfou.getText().length() != 0){
+        }else if(text_numfou.getText().length() == 0){
             error_text.setText("Champ obligatoire");
         }else {
             error_text.setText("");
+            // Je récupere le numéro du fournisseur
             f.setNum_fou(text_numfou.getText());
+            // J'apelle ma fonction avec le numéro du fournisseur en paramètre
             f.bdd(f.getNum_fou());
             if (f.getNom() != null) {
                 nom_text.setText(f.getNom());
@@ -194,7 +196,7 @@ public class Form_search extends javax.swing.JFrame {
                 ville_text.setText("");
                 error_text.setText("Le code fournisseur saisie n'existe pas !");
             }
-
+            // Affiche le résultat 
             adresse_text.setText(f.getAdresse());
             cp_text.setText(f.getCp());
             ville_text.setText(f.getVille());

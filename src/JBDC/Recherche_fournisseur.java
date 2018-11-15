@@ -12,14 +12,14 @@ import java.sql.*;
  * @author 80010-37-15
  */
 public class Recherche_fournisseur  {
-
+    // ATTRIBUT
     private String num_fou;
     private String nom;
     private String adresse;
     private String cp;
     private String ville;
     private String contact;
-
+    // GETTER / SETTER
     public String getNum_fou() {
         return num_fou;
     }
@@ -67,20 +67,15 @@ public class Recherche_fournisseur  {
     public void setContact(String contact) {
         this.contact = contact;
     }
-
+    // Méthode qui permet de récuperer les informations du fournisseur
     public void bdd(String res) {
-        setNum_fou(res);
-        try {
-            Class.forName("com.mysql.jdbc.Driver");
-        } catch (Exception e) {
-            System.out.println(e.getMessage());
-        }
         try {  
             String url = "jdbc:mysql://localhost:3306/papyrus";
             Connection con = DriverManager.getConnection(url, "root", "leqxd777");
             PreparedStatement stm = con.prepareStatement("SELECT * FROM fournis WHERE NUMFOU=?");
             stm.setString(1, getNum_fou());
             ResultSet Result = stm.executeQuery();
+            // De base on dit qu'il est null (verification dans form_search
             setNom(null);
             while (Result.next()) {
                 setNom(Result.getString("NOMFOU"));
